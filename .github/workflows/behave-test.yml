@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: behave-report
-          path: behave/reports/
+          path: reports/
       - name: Upload report to AgileTest.App
         run: |
           docker run --rm \
