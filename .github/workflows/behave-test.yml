@@ -16,7 +16,7 @@ jobs:
       - name: Run test & generate report
         run: |
           pip install -r behave/requirements.txt
-          behave behave/features
+          behave behave/features -f json -o reports/behave-report.json
       - name: Upload report to artifacts
         uses: actions/upload-artifact@v4
         with:
