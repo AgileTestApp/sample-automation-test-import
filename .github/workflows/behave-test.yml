@@ -23,7 +23,9 @@ jobs:
           name: behave-report
           path: reports/
       - name: Check report file
-        run: ls -l reports/
+        run: ls -l ${{ github.workspace }}/reports/
+      - name: Print report file
+        run: cat ${{ github.workspace }}/reports/behave-report.json
       - name: Upload report to AgileTest.App
         env:
           AGILETEST_BASE_URL: ${{ secrets.AGILETEST_BASE_URL }}
@@ -38,4 +40,4 @@ jobs:
           -e AGILETEST_CLIENT_SECRET=$AGILETEST_CLIENT_SECRET \
           ghcr.io/agiletestapp/agiletest-cli:latest \
           test-execution import --framework-type behave --project-key TC \
-          <reports/behave-report.json
+          <${{ github.workspace }}/reports/behave-report.json
