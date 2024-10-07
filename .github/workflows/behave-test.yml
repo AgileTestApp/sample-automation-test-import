@@ -22,6 +22,8 @@ jobs:
         with:
           name: behave-report
           path: reports/
+      - name: Check report file
+        run: ls -l reports/
       - name: Upload report to AgileTest.App
         env:
           AGILETEST_BASE_URL: ${{ secrets.AGILETEST_BASE_URL }}
