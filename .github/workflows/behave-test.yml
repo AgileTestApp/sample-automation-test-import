@@ -1,7 +1,10 @@
-name: CI
+name: Behave Test & Upload Report
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
 jobs:
   behave-test-and-upload:
     runs-on: ubuntu-latest
