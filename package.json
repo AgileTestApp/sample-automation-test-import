@@ -7,8 +7,8 @@
     "junit-test": "jest --config junit/jest.config.js --ci",
     "behave-test": "cd behave && behave --no-capture",
     "robot-test": "robot -A robot/robot.config",
-    "nunit-test": "cd nunit.test && dotnet restore && dotnet add package NunitXml.TestLogger --version 4.0.254 && dotnet test --logger \"nunit;LogFilePath=../reports/nunit-report.xml\"",
-    "xunit-test": "cd xunit.test && dotnet restore && dotnet add package XunitXml.TestLogger --version 3.1.20 && dotnet test --logger \"xunit;LogFilePath=../reports/xunit-report.xml\"",
+    "nunit-test": "cd nunit.test && dotnet restore && dotnet test --logger \"nunit;LogFilePath=../reports/nunit-report.xml\"",
+    "xunit-test": "cd xunit.test && dotnet restore && dotnet test --logger \"xunit;LogFilePath=../reports/xunit-report.xml\"",
     "testng-test": "cd testng.test && mvn clean install",
     "junit-java-test": "cd junit-java && mvn clean install"
   },
