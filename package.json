@@ -9,8 +9,8 @@
     "robot-test": "robot -A robot/robot.config",
     "nunit-test": "cd nunit.test && dotnet restore && dotnet test --logger \"nunit;LogFilePath=../reports/nunit-report.xml\"",
     "xunit-test": "cd xunit.test && dotnet restore && dotnet test --logger \"xunit;LogFilePath=../reports/xunit-report.xml\"",
-    "testng-test": "cd testng.test && mvn clean install",
-    "junit-java-test": "cd junit-java && mvn clean install"
+    "testng-test": "cd testng.test && mvn test",
+    "junit-java-test": "cd junit-java && mvn test"
   },
   "devDependencies": {
     "jest": "^29.7.0",
