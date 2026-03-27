@@ -1,5 +1,4 @@
 {
-  "dependencies": {},
   "scripts": {
     "cucumber-test": "cucumber-js --config cucumber/cucumber.config.js",
     "junit-test": "jest --config junit/jest.config.js --ci",
@@ -11,8 +10,8 @@
     "junit-java-test": "cd junit-java && mvn test"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^12.1.0",
-    "jest": "^30.2.0",
+    "@cucumber/cucumber": "^12.7.0",
+    "jest": "^30.3.0",
     "jest-junit": "^16.0.0"
   }
 }
